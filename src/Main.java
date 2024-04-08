@@ -43,7 +43,6 @@ public class Main {
         boolean schoolApproved = humanAge >= schoolMinAge && humanAge <= schoolMaxAge;
         boolean universityApproved = humanAge >= universityMinAge && humanAge <= universityMaxAge;
         boolean workApproved = humanAge > universityMaxAge;
-        boolean inputTest = preschoolApproved || schoolApproved || universityApproved || workApproved;
         System.out.printf("Если возраст человека равен %s, то ему нужно ходить ", humanAge);
         if (preschoolApproved) {
             System.out.print("в детский сад.");
@@ -56,9 +55,6 @@ public class Main {
         }
         if (workApproved) {
             System.out.print("на работу.");
-        }
-        if (!inputTest) {
-            System.out.print("в ясли");
         }
         //Задача 5
         System.out.println("\n\nЗадача 5");
@@ -83,12 +79,12 @@ public class Main {
         int vagonCapacityTot = 102;
         int vagonCapacitySitting = 60;
         int sittingNumber = 103;
-        if (sittingNumber <= vagonCapacitySitting) {
-            System.out.printf("Место №%s сидячее", sittingNumber);
-        } else if (sittingNumber > vagonCapacitySitting && sittingNumber <= vagonCapacityTot) {
-            System.out.printf("Место №%s стоячее", sittingNumber);
+        if (sittingNumber < vagonCapacitySitting) {
+            System.out.printf("Есть сидячие места.");
+        } else if (sittingNumber < vagonCapacityTot) {
+            System.out.printf("Есть стоячие места.");
         } else {
-            System.out.printf("Мест нет, вагон забит");
+            System.out.printf("Мест нет, вагон забит.");
         }
         //Задача 7
         System.out.println("\n\nЗадача 7");
