@@ -60,6 +60,32 @@ public class Main {
         if (!inputTest) {
             System.out.print("в ясли");
         }
+        //Задача 6
+        System.out.println("\n\nЗадача 6");
+        int vagonCapacityTot = 102;
+        int vagonCapacitySitting = 60;
+        int sittingNumber = 103;
+        if (sittingNumber <= vagonCapacitySitting) {
+            System.out.printf("\nМесто №%s сидячее", sittingNumber);
+        } else if (sittingNumber > vagonCapacitySitting && sittingNumber <= vagonCapacityTot) {
+            System.out.printf("\nМесто №%s стоячее", sittingNumber);
+        } else {
+            System.out.printf("\nМест нет, вагон забит");
+        }
+        //Задача 7
+        System.out.println("\n\nЗадача 6");
+        int one = 23;
+        int two = 36;
+        int three = 22;
+        boolean oneGreat = (one >= two) && (one >= three);
+        boolean twoGreat = (two >= one) && (two >= three);
+        if (oneGreat) {
+            System.out.printf("\nЧисло %s наибольшее", one);
+        } else if (twoGreat) {
+            System.out.printf("\nЧисло %s наибольшее", two);
+        } else {
+            System.out.printf("\nЧисло %s наибольшее", three);
+        }
 
     }
 }
