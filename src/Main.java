@@ -69,7 +69,7 @@ public class Main {
         boolean attractWithParents = (childAge >= ageForbidden) && (childAge < ageWithParents);
         boolean attractFree = childAge >= ageWithParents;
         System.out.printf("Если возраст ребенка равен %s, то ему ", childAge);
-        if (attractForbidden){
+        if (attractForbidden) {
             System.out.print("нельзя кататься на аттракционе.");
         }
         if (attractWithParents) {
