@@ -60,31 +60,49 @@ public class Main {
         if (!inputTest) {
             System.out.print("в ясли");
         }
+        //Задача 5
+        System.out.println("\n\nЗадача 5");
+        int childAge = 25;
+        int ageForbidden = 5;
+        int ageWithParents = 14;
+        boolean attractForbidden = childAge < ageForbidden;
+        boolean attractWithParents = (childAge >= ageForbidden) && (childAge < ageWithParents);
+        boolean attractFree = childAge >= ageWithParents;
+        System.out.printf("Если возраст ребенка равен %s, то ему ", childAge);
+        if (attractForbidden){
+            System.out.print("нельзя кататься на аттракционе.");
+        }
+        if (attractWithParents) {
+            System.out.print("можно кататься на аттракционе в сопровождении взрослого.");
+        }
+        if (attractFree) {
+            System.out.print("можно кататься на аттракционе без сопровождения взрослого");
+        }
         //Задача 6
         System.out.println("\n\nЗадача 6");
         int vagonCapacityTot = 102;
         int vagonCapacitySitting = 60;
         int sittingNumber = 103;
         if (sittingNumber <= vagonCapacitySitting) {
-            System.out.printf("\nМесто №%s сидячее", sittingNumber);
+            System.out.printf("Место №%s сидячее", sittingNumber);
         } else if (sittingNumber > vagonCapacitySitting && sittingNumber <= vagonCapacityTot) {
-            System.out.printf("\nМесто №%s стоячее", sittingNumber);
+            System.out.printf("Место №%s стоячее", sittingNumber);
         } else {
-            System.out.printf("\nМест нет, вагон забит");
+            System.out.printf("Мест нет, вагон забит");
         }
         //Задача 7
-        System.out.println("\n\nЗадача 6");
+        System.out.println("\n\nЗадача 7");
         int one = 23;
         int two = 36;
         int three = 22;
         boolean oneGreat = (one >= two) && (one >= three);
         boolean twoGreat = (two >= one) && (two >= three);
         if (oneGreat) {
-            System.out.printf("\nЧисло %s наибольшее", one);
+            System.out.printf("Число %s наибольшее", one);
         } else if (twoGreat) {
-            System.out.printf("\nЧисло %s наибольшее", two);
+            System.out.printf("Число %s наибольшее", two);
         } else {
-            System.out.printf("\nЧисло %s наибольшее", three);
+            System.out.printf("Число %s наибольшее", three);
         }
 
     }
